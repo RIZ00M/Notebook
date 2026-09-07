@@ -1,7 +1,7 @@
 **Download File**
 
 wget https://EXAMPLE.com/additional/linux-fundamentals/myfile.txt
-
+wget -O X.zip 'X'
 
 **Transfer File**
 
