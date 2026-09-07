@@ -9,7 +9,9 @@ Get-Help New-LocalUser -examples
 
 
 
-Get-Alias -Definition Type
+Get-Alias -Definition Get-Content
+
+Get-Alias type
 
 Get-Alias - Lists aliases
 
