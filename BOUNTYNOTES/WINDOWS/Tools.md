@@ -75,5 +75,8 @@ mstsc
 
 
 **Group Policy Management**
-Start Tool
+
+**Default Domain Policy**
+
+**gpupdate /force**
 
