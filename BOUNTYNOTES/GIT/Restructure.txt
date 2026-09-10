@@ -1,9 +1,0 @@
-cd /path/to/your/project
-
-git init
-git remote -v
-git add -A
-git commit -m "Reset project structure"
-
-git branch -M main
-git push -u origin main --force
