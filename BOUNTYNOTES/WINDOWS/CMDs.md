@@ -1,45 +1,65 @@
-**COMMAND PROMPT**
-cmd - open command prompt
-cls - clear screen
+# Command Prompt (CMD)
 
-**BASICS**
-dir - list directories
-mkdir - creates directories
-rmdr - removes directories
-delete - deletes directories
-tree - tree of files
-move - moves files
-copy - copies files
-type - view files
-more - view more in files (some_command | more) pages
+## Command Prompt
 
-shutdown /s - shutdown
-shutdown /r - restart
-shutdown /h - hibernate
-shutdown /l - logoff
+| Command | Purpose |
+|---|---|
+| `cmd` | Open Command Prompt |
+| `cls` | Clear screen |
 
-**HEALTH**
-chkdsk -  checks the file system and disk volumes
-driverquery - displays a list of installed device drivers
-sfc /scannow - scans system files for corruption and repairs them if possible
+## Basics
 
---------------------------
+| Command | Purpose |
+|---|---|
+| `dir` | List directories |
+| `mkdir` | Creates directories |
+| `rmdir` | Removes directories |
+| `delete` | Deletes directories |
+| `tree` | Tree of files |
+| `move` | Moves files |
+| `copy` | Copies files |
+| `type` | View files |
+| `more` | View more in files (`some_command \| more` pages the output) |
 
-**SYSTEM INFO**
-hostname - list hostname
-whoami - list user
-tasklist - lists tasks (tasklist /FI "imagename eq X.exe")
-taskkill /PID 1337 - Kills a task
+## Power Options
 
-**IPCONFIG**
-ipconfig - list ip configuration
-ipconfig /? - list ipconfig manual
-ipconfig /all - list full detailed info
+| Command | Purpose |
+|---|---|
+| `shutdown /s` | Shutdown |
+| `shutdown /r` | Restart |
+| `shutdown /h` | Hibernate |
+| `shutdown /l` | Log off |
 
-**NET**
-net - network resource manager
-net help - list net manual
-net user help - list net manual for user
-netstat - shows connections
+## Health
 
+| Command | Purpose |
+|---|---|
+| `chkdsk` | Checks the file system and disk volumes |
+| `driverquery` | Displays a list of installed device drivers |
+| `sfc /scannow` | Scans system files for corruption and repairs them if possible |
 
+## System Info
+
+| Command | Purpose |
+|---|---|
+| `hostname` | List hostname |
+| `whoami` | List current user |
+| `tasklist` | Lists tasks (`tasklist /FI "imagename eq X.exe"` to filter) |
+| `taskkill /PID 1337` | Kills a task by PID |
+
+## IPConfig
+
+| Command | Purpose |
+|---|---|
+| `ipconfig` | List IP configuration |
+| `ipconfig /?` | List ipconfig manual |
+| `ipconfig /all` | List full detailed info |
+
+## Net
+
+| Command | Purpose |
+|---|---|
+| `net` | Network resource manager |
+| `net help` | List net manual |
+| `net user help` | List net manual for user |
+| `netstat` | Shows connections |

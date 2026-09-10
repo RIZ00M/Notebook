@@ -1,221 +1,141 @@
-**MISC**
+# Linux Commands
 
-echo - relay text to the CLI
+## Misc
 
+| Command | Purpose |
+|---|---|
+| `echo` | Relay text to the CLI |
 
+## History
 
-**HISTORY**
+| Command | Purpose |
+|---|---|
+| `history` | Shows history of commands |
+| `history -c && history -w` | Clear full history |
+| `history -d 1234` | Clear a specific history entry |
 
-history - history of commands
+## Shells
 
-history -c \&\& history -w - clear full history
+| Command | Purpose |
+|---|---|
+| `bash` | Swap to the Bourne Again shell |
+| `zsh` | Swap to the Z shell |
+| `fish` | Swap to the Friendly Interactive Shell |
+| `chsh -s /usr/bin/zsh` | Change your default shell |
 
-history -d 1234 - clear history specific
+## Permissions
 
+| Command | Purpose |
+|---|---|
+| `sudo su` | Switch to root |
+| `chmod +x first_script.sh` | Add execute permission |
+| `chmod -x first_script.sh` | Remove execute permission |
 
+## Navigation
 
-**SHELLS**
+| Command | Purpose |
+|---|---|
+| `pwd` | Show current directory |
+| `ls` | List directory contents |
+| `cd` | Change directory |
 
-bash - swap bourne again shell
+## File Interaction
 
-zsh - swap z-shell 
+| Command | Purpose |
+|---|---|
+| `cat` | Quick view of a file |
+| `more` | Full, paginated view of a file |
+| `nano` | Nano text editor |
+| `grep THM directory.txt` | Find content in a file |
 
-fish - swap friendly interactive shell
+## Scripting
 
-chsh -s /usr/bin/zsh 
-
-
-
-**PERMISSIONS**
-
-sudo su
-
-chmod +x first\_script.sh - add execution
-
-chmos -x first\_script.sh - remove execution
-
-
-
-**NAVIGATION**
-
-pwd - current directory
-
-ls - list directories
-
-cd - change directory
-
-
-
-**FILE INTERACTION**
-cat - quick view of a file
-
-more - full view of a file
-
-nano - nano editor
-
-grep THM directory.txt - find content in a file
-
-**SCRIPTING**
+### Variables
 
 ```bash
-
-\# Variables
-
-\#!/bin/bash
-
-echo "Hey, what’s your name?"
-
+#!/bin/bash
+echo "Hey, what's your name?"
 read name
-
 echo "Welcome, $name"
-
 ```
 
-
+### Loops
 
 ```bash
-
-\# Loops
-
-\#!/bin/bash
-
+#!/bin/bash
 for i in {1..10};
-
 do
-
-echo $i
-
+    echo $i
 done
-
 ```
 
-
+### Conditions
 
 ```bash
-
-\# Conditions
-
-\#!/bin/bash
-
+#!/bin/bash
 echo "Please enter your name first:"
-
 read name
-
-if \[ "$name" = "Stewart" ]; then
-
-&#x20;  	echo "Welcome Stewart! Here is the secret: THM\_Script"
-
+if [ "$name" = "Stewart" ]; then
+    echo "Welcome Stewart! Here is the secret: THM_Script"
 else
-
-&#x09;echo "Sorry! You are not authorized to access the secret."
-
+    echo "Sorry! You are not authorized to access the secret."
 fi
-
 ```
 
-
+### Multi-Input Example (Username / Company / PIN)
 
 ```bash
-
-\# Defining the Interpreter 
-
-\#!/bin/bash 
-
-\# Defining the variables
-
+#!/bin/bash
+# Defining the variables
 username=""
-
 companyname=""
-
 pin=""
 
-\# Defining the loop
-
+# Defining the loop
 for i in {1..3}; do
-
-\# Defining the conditional statements
-
-&#x20;       if \[ "$i" -eq 1 ]; then
-
-&#x20;               echo "Enter your Username:"
-
-&#x20;               read username
-
-&#x20;       elif \[ "$i" -eq 2 ]; then
-
-&#x20;               echo "Enter your Company name:"
-
-&#x20;               read companyname
-
-&#x20;       else
-
-&#x20;               echo "Enter your PIN:"
-
-&#x20;               read pin
-
-&#x20;       fi
-
+    # Defining the conditional statements
+    if [ "$i" -eq 1 ]; then
+        echo "Enter your Username:"
+        read username
+    elif [ "$i" -eq 2 ]; then
+        echo "Enter your Company name:"
+        read companyname
+    else
+        echo "Enter your PIN:"
+        read pin
+    fi
 done
 
-\# Checking if the user entered the correct details
-
-if \[ "$username" = "John" ] \&\& \[ "$companyname" = "Tryhackme" ] \&\& \[ "$pin" = "7385" ]; then
-
-&#x20;       echo "Authentication Successful. You can now access your locker, John."
-
+# Checking if the user entered the correct details
+if [ "$username" = "John" ] && [ "$companyname" = "Tryhackme" ] && [ "$pin" = "7385" ]; then
+    echo "Authentication Successful. You can now access your locker, John."
 else
-
-&#x20;       echo "Authentication Denied!!"
-
+    echo "Authentication Denied!!"
 fi
-
 ```
 
-
+### Flag Search Example
 
 ```bash
+#!/bin/bash
 
-\#!/bin/bash
-
-
-
-\# Defining the directory to search our flag
-
+# Defining the directory to search our flag
 directory="/var/log"
 
-
-
-\# Defining the flag to search
-
+# Defining the flag to search
 flag="thm-flag01-script"
-
-
 
 echo "Flag search in directory: $directory in progress..."
 
+# Defining for loop to iterate over all the files with .log extension in the defined directory
+for file in "$directory"/*.log; do
+    # Check if the file exists (handles cases where no .log files are found)
+    [ -f "$file" ] || continue
 
-
-\# Defining for loop to iterate over all the files with .log extension in the defined directory
-
-for file in "$directory"/\*.log; do
-
-&#x20;   # Check if the file exists (handles cases where no .log files are found)
-
-&#x20;   \[ -f "$file" ] || continue
-
-
-
-&#x20;   # Check if the file contains the flag
-
-&#x20;   if grep -q "$flag" "$file"; then
-
-&#x20;       # Print the filename
-
-&#x20;       echo "Flag found in: $(basename "$file")"
-
-&#x20;   fi
-
+    # Check if the file contains the flag
+    if grep -q "$flag" "$file"; then
+        # Print the filename
+        echo "Flag found in: $(basename "$file")"
+    fi
 done
-
 ```
-

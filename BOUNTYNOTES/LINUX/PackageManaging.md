@@ -1,27 +1,50 @@
-**Package Commands**
+# Package Managing
 
-sudo add-apt-repository / dpkg
+## Core Commands
 
+| Command | Purpose |
+|---|---|
+| `sudo add-apt-repository` | Adds a repository to apt's sources |
+| `dpkg` | Low-level package manager (installs/manages `.deb` files directly) |
 
-**Manual Download Example** 
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+## Manual Repository Add — Example: Sublime Text 3
 
-Add Sublime Text 3's repository to our apt sources list. A good practice is to have a separate file for every different community/3rd party repository that we add.
+1. **Add the GPG key**
 
-Create a file named sublime-text.list in /etc/apt/sources.list.d and enter the repository information like so:
+   ```bash
+   wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+   ```
 
-And now use Nano or a text editor of your choice to add \& save the Sublime Text 3 repository into this newly created file:
-deb https://download.sublimetext.com/ apt/stable/
+   Adds Sublime Text 3's repository key. Good practice is to keep a separate file for every different community/3rd-party repository you add.
 
+2. **Create a sources file**
 
+   Create a file named `sublime-text.list` in `/etc/apt/sources.list.d/` and add the repository info to it — using Nano or a text editor of your choice:
 
-After we have added this entry, we need to update apt to recognise this new entry -- this is done using the apt update command
+   ```
+   deb https://download.sublimetext.com/ apt/stable/
+   ```
 
+3. **Update apt**
 
+   ```bash
+   apt update
+   ```
 
-Once successfully updated, we can now proceed to install the software that we have trusted and added to apt using apt install sublime-text
+   Refreshes apt so it recognises the new repository entry.
 
+4. **Install the package**
 
+   ```bash
+   apt install sublime-text
+   ```
 
-Removing packages is as easy as reversing. This process is done by using the add-apt-repository --remove ppa:PPA\_Name/ppa command or by manually deleting the file that we previously added to. Once removed, we can just use apt remove \[software-name-here] i.e. apt remove sublime-text
+## Removing Packages
 
+Reverse the process:
+
+| Method | Command |
+|---|---|
+| Remove a PPA | `add-apt-repository --remove ppa:PPA_Name/ppa` |
+| Remove manually | Delete the file previously added to `/etc/apt/sources.list.d/` |
+| Uninstall the software | `apt remove [software-name-here]` (e.g. `apt remove sublime-text`) |
