@@ -1,2 +1,2 @@
 # Notebook
-Personal Collection of Notes
+Collection of Notes From My BugHunting
