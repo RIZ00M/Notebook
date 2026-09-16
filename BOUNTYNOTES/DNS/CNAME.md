@@ -8,7 +8,7 @@ A CNAME (Canonical Name) record points one domain name to another ("canonical") 
 nslookup --type=CNAME shop.website.thm
 ```
 
-![nslookup CNAME lookup output](assets/CNAME.png)
+![nslookup CNAME lookup](assets/CNAME.png)
 
 ## Example Output
 
