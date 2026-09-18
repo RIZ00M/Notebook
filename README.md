@@ -134,5 +134,3 @@ Repo housekeeping commands.
 |---|---|
 | [`Restructure.md`](BOUNTYNOTES/GIT/Restructure.md) | Resetting a repo's history and force-pushing `main` |
 
----
-
