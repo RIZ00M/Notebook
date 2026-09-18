@@ -8,7 +8,7 @@
 ![TryHackMe](https://img.shields.io/badge/source-TryHackMe-red?style=for-the-badge&logo=tryhackme)
 ![Status](https://img.shields.io/badge/status-actively%20updated-brightgreen?style=for-the-badge)
 
-*Quick, no-nonsense notes on the tools and concepts I keep coming back to — from HTTP internals to Active Directory PowerShell.*
+*My Personal Notebook accessible to anyone who wants it!*
 
 </div>
 
