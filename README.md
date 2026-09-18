@@ -7,7 +7,6 @@
 ![Markdown](https://img.shields.io/badge/docs-markdown-blue?style=for-the-badge&logo=markdown)
 ![TryHackMe](https://img.shields.io/badge/source-TryHackMe-red?style=for-the-badge&logo=tryhackme)
 ![Status](https://img.shields.io/badge/status-actively%20updated-brightgreen?style=for-the-badge)
-![Made with](https://img.shields.io/badge/made%20with-late%20nights%20%26%20coffee-orange?style=for-the-badge)
 
 *Quick, no-nonsense notes on the tools and concepts I keep coming back to — from HTTP internals to Active Directory PowerShell.*
 
