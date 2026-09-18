@@ -136,26 +136,3 @@ Repo housekeeping commands.
 
 ---
 
-<div align="center">
-
-### 🗂️ Folder Structure
-
-```
-Notebook/
-└── BOUNTYNOTES/
-    ├── RECONSAINCE/
-    ├── BRUTEFORCING/
-    ├── INJECTION/
-    ├── NETWORKING/
-    ├── HTTP/
-    ├── DNS/
-    ├── PYTHON/
-    ├── JAVASCRIPT/
-    ├── LINUX/
-    ├── WINDOWS/
-    └── GIT/
-```
-
-*Built one TryHackMe room, one CTF, and one "wait how did that work again?" at a time.* 🚩
-
-</div>
