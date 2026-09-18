@@ -14,7 +14,7 @@
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 
 | # | Topic | What's Inside |
 |---|---|---|
@@ -32,7 +32,7 @@
 
 ---
 
-## 🎯 Reconnaissance
+## Reconnaissance
 
 Enumeration commands and directory brute-forcing.
 
@@ -40,7 +40,7 @@ Enumeration commands and directory brute-forcing.
 |---|---|
 | [`Gobuster.md`](BOUNTYNOTES/RECONSAINCE/Gobuster.md) | Directory/file brute-forcing against a web server |
 
-## 🔓 Bruteforcing
+## Bruteforcing
 
 Credential attacks against live services.
 
@@ -48,7 +48,7 @@ Credential attacks against live services.
 |---|---|
 | [`Hydra.md`](BOUNTYNOTES/BRUTEFORCING/Hydra.md) | Brute-forcing HTTP POST login forms |
 
-## 💉 Injection
+## Injection
 
 Payloads for exploiting unsanitised user input.
 
@@ -57,7 +57,7 @@ Payloads for exploiting unsanitised user input.
 | [`HTMLPayloads.md`](BOUNTYNOTES/INJECTION/HTMLPayloads.md) | HTML injection basics + link injection payload |
 | [`JavaScriptPayloads.md`](BOUNTYNOTES/INJECTION/JavaScriptPayloads.md) | JS payload to hijack page elements |
 
-## 🌐 Networking
+## Networking
 
 Core networking theory and legacy protocols.
 
@@ -66,7 +66,7 @@ Core networking theory and legacy protocols.
 | [`OSIModel.md`](BOUNTYNOTES/NETWORKING/OSIModel.md) | The 7 OSI layers, MAC/IP breakdowns, port table |
 | [`Telnet.md`](BOUNTYNOTES/NETWORKING/Telnet.md) | Raw TCP connections via Telnet (echo, daytime, HTTP) |
 
-## 🌍 HTTP
+## HTTP
 
 The nuts and bolts of the web's core protocol.
 
@@ -77,7 +77,7 @@ The nuts and bolts of the web's core protocol.
 | [`HTTPStatusCodes.md`](BOUNTYNOTES/HTTP/HTTPStatusCodes.md) | Full status code reference table |
 | [`CookiesFlow.md`](BOUNTYNOTES/HTTP/CookiesFlow.md) | How cookies are set & sent, step by step |
 
-## 🧬 DNS
+## DNS
 
 Domain resolution and record types.
 
@@ -85,7 +85,7 @@ Domain resolution and record types.
 |---|---|
 | [`CNAME.md`](BOUNTYNOTES/DNS/CNAME.md) | CNAME records & `nslookup` example |
 
-## 🐍 Python
+## Python
 
 Fast scripting for file transfer.
 
@@ -93,7 +93,7 @@ Fast scripting for file transfer.
 |---|---|
 | [`ServingFiles.md`](BOUNTYNOTES/PYTHON/ServingFiles.md) | Host & retrieve files with `http.server` / `wget` |
 
-## 📜 JavaScript
+## JavaScript
 
 DOM basics and a couple of demo scripts.
 
@@ -102,7 +102,7 @@ DOM basics and a couple of demo scripts.
 | [`JavaScriptDemo.md`](BOUNTYNOTES/JAVASCRIPT/JavaScriptDemo.md) | Basic DOM manipulation example |
 | [`JavaScriptGuesser.md`](BOUNTYNOTES/JAVASCRIPT/JavaScriptGuesser.md) | Console number-guessing game (+ source) |
 
-## 🐧 Linux
+## Linux
 
 Everyday commands, scheduling, and package management.
 
@@ -114,7 +114,7 @@ Everyday commands, scheduling, and package management.
 | [`FileTransfering.md`](BOUNTYNOTES/LINUX/FileTransfering.md) | `wget` / `scp` file transfer |
 | [`PackageManaging.md`](BOUNTYNOTES/LINUX/PackageManaging.md) | `apt` repos, install/remove packages |
 
-## 🪟 Windows
+## Windows
 
 Command line tools, PowerShell, and Active Directory.
 
@@ -125,7 +125,7 @@ Command line tools, PowerShell, and Active Directory.
 | [`ActiveDirectoryPowerShell.md`](BOUNTYNOTES/WINDOWS/ActiveDirectoryPowerShell.md) | Resetting AD user passwords |
 | [`Tools.md`](BOUNTYNOTES/WINDOWS/Tools.md) | Built-in Windows admin tools (`msconfig`, `regedit`, etc.) |
 
-## 🔧 Git
+## Git
 
 Repo commands.
 
