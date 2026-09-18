@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📓 RIZ00M's Notebook
+# RIZ00M's Notebook
 
 ### A personal cheat-sheet vault for cybersecurity, networking & scripting
 
