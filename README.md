@@ -128,7 +128,7 @@ Command line tools, PowerShell, and Active Directory.
 
 ## 🔧 Git
 
-Repo housekeeping commands.
+Repo commands.
 
 | File | Description |
 |---|---|
