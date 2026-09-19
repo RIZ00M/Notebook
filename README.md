@@ -38,7 +38,7 @@ Enumeration commands and directory brute-forcing.
 
 | File | Description |
 |---|---|
-| [`Gobuster.md`](BOUNTYNOTES/RECONSAINCE/Gobuster.md) | Directory/file brute-forcing against a web server |
+| [`Gobuster.md`](BOUNTYNOTES/RECONSAINCE/Gobuster.md) | Directory/file brute forcing |
 
 ## Bruteforcing
 
@@ -46,7 +46,7 @@ Credential attacks against live services.
 
 | File | Description |
 |---|---|
-| [`Hydra.md`](BOUNTYNOTES/BRUTEFORCING/Hydra.md) | Brute-forcing HTTP POST login forms |
+| [`Hydra.md`](BOUNTYNOTES/BRUTEFORCING/Hydra.md) | Brute forcing HTTP POST login forms |
 
 ## Injection
 
