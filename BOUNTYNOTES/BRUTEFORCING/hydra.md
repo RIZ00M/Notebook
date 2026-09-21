@@ -1,6 +1,6 @@
 # Hydra – Login Brute Forcing
 
-Hydra can brute-force login forms (among many other services) using a password list.
+Hydra is an amazing brute forcing kit.
 
 ## Command
 
