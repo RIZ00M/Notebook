@@ -37,76 +37,76 @@
 ## Reconnaissance
 Enumeration commands and directory brute-forcing.
 
-| Directory | Description |
+| File | Description |
 |---|---|
-| [`BOUNTYNOTES/RECON/RECON`](BOUNTYNOTES/RECON/RECON) | Reconnaissance and discovery notes |
+| [`BOUNTYNOTES/RECON/RECON.md`](BOUNTYNOTES/RECON/RECON.md) | Reconnaissance and discovery notes |
 
 ## Bruteforcing
 Credential attacks against live services.
 
-| Directory | Description |
+| File | Description |
 |---|---|
-| [`BOUNTYNOTES/BRUTEFORCING/BRUTEFORCING`](BOUNTYNOTES/BRUTEFORCING/BRUTEFORCING) | Service brute-forcing notes |
+| [`BOUNTYNOTES/BRUTEFORCING/BRUTEFORCING.md`](BOUNTYNOTES/BRUTEFORCING/BRUTEFORCING.md) | Service brute-forcing notes |
 
 ## Injection
 Payloads for exploiting unsanitised user input.
 
-| Directory | Description |
+| File | Description |
 |---|---|
-| [`BOUNTYNOTES/INJECTION/INJECTION`](BOUNTYNOTES/INJECTION/INJECTION) | HTML & JS injection payload notes |
+| [`BOUNTYNOTES/INJECTION/INJECTION.md`](BOUNTYNOTES/INJECTION/INJECTION.md) | HTML & JS injection payload notes |
 
 ## Networking
 Core networking theory and legacy protocols.
 
-| Directory | Description |
+| File | Description |
 |---|---|
-| [`BOUNTYNOTES/NETWORKING/NETWORKING`](BOUNTYNOTES/NETWORKING/NETWORKING) | OSI model and networking protocols notes |
+| [`BOUNTYNOTES/NETWORKING/NETWORKING.md`](BOUNTYNOTES/NETWORKING/NETWORKING.md) | OSI model and networking protocols notes |
 
 ## HTTP
 The nuts and bolts of the web's core protocol.
 
-| Directory | Description |
+| File | Description |
 |---|---|
-| [`BOUNTYNOTES/HTTP/HTTP`](BOUNTYNOTES/HTTP/HTTP) | HTTP methods, status codes, and cookie notes |
+| [`BOUNTYNOTES/HTTP/HTTP.md`](BOUNTYNOTES/HTTP/HTTP.md) | HTTP methods, status codes, and cookie notes |
 
 ## DNS
 Domain resolution and record types.
 
-| Directory | Description |
+| File | Description |
 |---|---|
-| [`BOUNTYNOTES/DNS/DNS`](BOUNTYNOTES/DNS/DNS) | DNS records and lookup notes |
+| [`BOUNTYNOTES/DNS/DNS.md`](BOUNTYNOTES/DNS/DNS.md) | DNS records and lookup notes |
 
 ## Python
 Fast scripting for file transfer.
 
-| Directory | Description |
+| File | Description |
 |---|---|
-| [`BOUNTYNOTES/PYTHON/PYTHON`](BOUNTYNOTES/PYTHON/PYTHON) | Python scripting and file server notes |
+| [`BOUNTYNOTES/PYTHON/PYTHON.md`](BOUNTYNOTES/PYTHON/PYTHON.md) | Python scripting and file server notes |
 
 ## JavaScript
 DOM basics and a couple of demo scripts.
 
-| Directory | Description |
+| File | Description |
 |---|---|
-| [`BOUNTYNOTES/JAVASCRIPT/JAVASCRIPT`](BOUNTYNOTES/JAVASCRIPT/JAVASCRIPT) | JavaScript DOM and script notes |
+| [`BOUNTYNOTES/JAVASCRIPT/JAVASCRIPT.md`](BOUNTYNOTES/JAVASCRIPT/JAVASCRIPT.md) | JavaScript DOM and script notes |
 
 ## Linux
 Everyday commands, scheduling, and package management.
 
-| Directory | Description |
+| File | Description |
 |---|---|
-| [`BOUNTYNOTES/LINUX/LINUX`](BOUNTYNOTES/LINUX/LINUX) | Linux shell, cron, and package management notes |
+| [`BOUNTYNOTES/LINUX/LINUX.md`](BOUNTYNOTES/LINUX/LINUX.md) | Linux shell, cron, and package management notes |
 
 ## Windows
 Command line tools, PowerShell, and Active Directory.
 
-| Directory | Description |
+| File | Description |
 |---|---|
-| [`BOUNTYNOTES/WINDOWS/WINDOWS`](BOUNTYNOTES/WINDOWS/WINDOWS) | Windows CLI, PowerShell, and AD notes |
+| [`BOUNTYNOTES/WINDOWS/WINDOWS.md`](BOUNTYNOTES/WINDOWS/WINDOWS.md) | Windows CLI, PowerShell, and AD notes |
 
 ## Git
 Repo commands.
 
-| Directory | Description |
+| File | Description |
 |---|---|
-| [`BOUNTYNOTES/GIT/GIT`](BOUNTYNOTES/GIT/GIT) | Git repository management notes |
+| [`BOUNTYNOTES/GIT/GIT.md`](BOUNTYNOTES/GIT/GIT.md) | Git repository management notes |
