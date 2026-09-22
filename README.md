@@ -16,120 +16,97 @@
 
 ## Table of Contents
 
-| # | Topic | What's Inside |
-|---|---|---|
-| 🎯 | [Reconnaissance](#-reconnaissance) | Enumeration & discovery |
-| 🔓 | [Bruteforcing](#-bruteforcing) | Credential attacks |
-| 💉 | [Injection](#-injection) | HTML / JS injection payloads |
-| 🌐 | [Networking](#-networking) | OSI Model, Telnet |
-| 🌍 | [HTTP](#-http) | Methods, status codes, cookies |
-| 🧬 | [DNS](#-dns) | Record types & lookups |
-| 🐍 | [Python](#-python) | Quick scripting & file serving |
-| 📜 | [JavaScript](#-javascript) | DOM manipulation & demos |
-| 🐧 | [Linux](#-linux) | Commands, cron, packages |
-| 🪟 | [Windows](#-windows) | CMD, PowerShell, Active Directory |
-| 🔧 | [Git](#-git) | Repo housekeeping |
+| #   | Topic            | What's Inside                     |
+| --- | ---------------- | --------------------------------- |
+| 🎯  | [[BRUTEFORCING]] | Credential attacks                |
+| 🔓  | [[RECON]]  | Enumeration & discovery           |
+| 💉  | [[INJECTION]]    | HTML / JS injection payloads      |
+| 🌐  | [[NETWORKING]]   | OSI Model, Telnet                 |
+| 🌍  | [[HTTP]]         | Methods, status codes, cookies    |
+| 🧬  | [[DNS]]          | Record types & lookups            |
+| 🐍  | [[PYTHON]]       | Quick scripting & file serving    |
+| 📜  | [[JAVASCRIPT]]   | DOM manipulation & demos          |
+| 🐧  | [[LINUX]]        | Commands, cron, packages          |
+| 🪟  | [[WINDOWS]]      | CMD, PowerShell, Active Directory |
+| 🔧  | [[GIT]]          | Repo housekeeping                 |
+| 🗄️ | [[SQL]]          | SQL queries & database security   |
+
 
 ---
 
 ## Reconnaissance
-
 Enumeration commands and directory brute-forcing.
 
-| File | Description |
+| Directory | Description |
 |---|---|
-| [`Gobuster.md`](BOUNTYNOTES/RECONSAINCE/Gobuster.md) | Directory/file brute forcing |
+| [`BOUNTYNOTES/RECON/RECON`](BOUNTYNOTES/RECON/RECON) | Reconnaissance and discovery notes |
 
 ## Bruteforcing
-
 Credential attacks against live services.
 
-| File | Description |
+| Directory | Description |
 |---|---|
-| [`Hydra.md`](BOUNTYNOTES/BRUTEFORCING/Hydra.md) | Brute forcing HTTP POST login forms |
+| [`BOUNTYNOTES/BRUTEFORCING/BRUTEFORCING`](BOUNTYNOTES/BRUTEFORCING/BRUTEFORCING) | Service brute-forcing notes |
 
 ## Injection
-
 Payloads for exploiting unsanitised user input.
 
-| File | Description |
+| Directory | Description |
 |---|---|
-| [`HTMLPayloads.md`](BOUNTYNOTES/INJECTION/HTMLPayloads.md) | HTML injection basics + link injection payload |
-| [`JavaScriptPayloads.md`](BOUNTYNOTES/INJECTION/JavaScriptPayloads.md) | JS payload to hijack page elements |
+| [`BOUNTYNOTES/INJECTION/INJECTION`](BOUNTYNOTES/INJECTION/INJECTION) | HTML & JS injection payload notes |
 
 ## Networking
-
 Core networking theory and legacy protocols.
 
-| File | Description |
+| Directory | Description |
 |---|---|
-| [`OSIModel.md`](BOUNTYNOTES/NETWORKING/OSIModel.md) | The 7 OSI layers, MAC/IP breakdowns, port table |
-| [`Telnet.md`](BOUNTYNOTES/NETWORKING/Telnet.md) | Raw TCP connections via Telnet (echo, daytime, HTTP) |
+| [`BOUNTYNOTES/NETWORKING/NETWORKING`](BOUNTYNOTES/NETWORKING/NETWORKING) | OSI model and networking protocols notes |
 
 ## HTTP
-
 The nuts and bolts of the web's core protocol.
 
-| File | Description |
+| Directory | Description |
 |---|---|
-| [`CoreHTTPCommands.md`](BOUNTYNOTES/HTTP/CoreHTTPCommands.md) | HTTP verbs & anatomy of a request |
-| [`HTTPMethods.md`](BOUNTYNOTES/HTTP/HTTPMethods.md) | GET / POST / PUT / DELETE explained |
-| [`HTTPStatusCodes.md`](BOUNTYNOTES/HTTP/HTTPStatusCodes.md) | Full status code reference table |
-| [`CookiesFlow.md`](BOUNTYNOTES/HTTP/CookiesFlow.md) | How cookies are set & sent, step by step |
+| [`BOUNTYNOTES/HTTP/HTTP`](BOUNTYNOTES/HTTP/HTTP) | HTTP methods, status codes, and cookie notes |
 
 ## DNS
-
 Domain resolution and record types.
 
-| File | Description |
+| Directory | Description |
 |---|---|
-| [`CNAME.md`](BOUNTYNOTES/DNS/CNAME.md) | CNAME records & `nslookup` example |
+| [`BOUNTYNOTES/DNS/DNS`](BOUNTYNOTES/DNS/DNS) | DNS records and lookup notes |
 
 ## Python
-
 Fast scripting for file transfer.
 
-| File | Description |
+| Directory | Description |
 |---|---|
-| [`ServingFiles.md`](BOUNTYNOTES/PYTHON/ServingFiles.md) | Host & retrieve files with `http.server` / `wget` |
+| [`BOUNTYNOTES/PYTHON/PYTHON`](BOUNTYNOTES/PYTHON/PYTHON) | Python scripting and file server notes |
 
 ## JavaScript
-
 DOM basics and a couple of demo scripts.
 
-| File | Description |
+| Directory | Description |
 |---|---|
-| [`JavaScriptDemo.md`](BOUNTYNOTES/JAVASCRIPT/JavaScriptDemo.md) | Basic DOM manipulation example |
-| [`JavaScriptGuesser.md`](BOUNTYNOTES/JAVASCRIPT/JavaScriptGuesser.md) | Console number-guessing game (+ source) |
+| [`BOUNTYNOTES/JAVASCRIPT/JAVASCRIPT`](BOUNTYNOTES/JAVASCRIPT/JAVASCRIPT) | JavaScript DOM and script notes |
 
 ## Linux
-
 Everyday commands, scheduling, and package management.
 
-| File | Description |
+| Directory | Description |
 |---|---|
-| [`RootDirectories.md`](BOUNTYNOTES/LINUX/RootDirectories.md) | Filesystem layout: `/etc`, `/var`, `/root`, `/tmp` |
-| [`LinuxCMDs.md`](BOUNTYNOTES/LINUX/LinuxCMDs.md) | Shells, permissions, navigation, bash scripting |
-| [`CronTabs.md`](BOUNTYNOTES/LINUX/CronTabs.md) | Scheduling recurring tasks |
-| [`FileTransfering.md`](BOUNTYNOTES/LINUX/FileTransfering.md) | `wget` / `scp` file transfer |
-| [`PackageManaging.md`](BOUNTYNOTES/LINUX/PackageManaging.md) | `apt` repos, install/remove packages |
+| [`BOUNTYNOTES/LINUX/LINUX`](BOUNTYNOTES/LINUX/LINUX) | Linux shell, cron, and package management notes |
 
 ## Windows
-
 Command line tools, PowerShell, and Active Directory.
 
-| File | Description |
+| Directory | Description |
 |---|---|
-| [`CMDs.md`](BOUNTYNOTES/WINDOWS/CMDs.md) | Command Prompt reference |
-| [`Powershell.md`](BOUNTYNOTES/WINDOWS/Powershell.md) | PowerShell cmdlets, piping, comparison operators |
-| [`ActiveDirectoryPowerShell.md`](BOUNTYNOTES/WINDOWS/ActiveDirectoryPowerShell.md) | Resetting AD user passwords |
-| [`Tools.md`](BOUNTYNOTES/WINDOWS/Tools.md) | Built-in Windows admin tools (`msconfig`, `regedit`, etc.) |
+| [`BOUNTYNOTES/WINDOWS/WINDOWS`](BOUNTYNOTES/WINDOWS/WINDOWS) | Windows CLI, PowerShell, and AD notes |
 
 ## Git
-
 Repo commands.
 
-| File | Description |
+| Directory | Description |
 |---|---|
-| [`Restructure.md`](BOUNTYNOTES/GIT/Restructure.md) | Resetting a repo's history and force-pushing `main` |
-
+| [`BOUNTYNOTES/GIT/GIT`](BOUNTYNOTES/GIT/GIT) | Git repository management notes |

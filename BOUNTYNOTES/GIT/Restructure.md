@@ -24,4 +24,4 @@ git push -u origin main --force
 | `git branch -M main` | Rename the current branch to `main` |
 | `git push -u origin main --force` | Force-push `main` to the remote, overwriting its history |
 
-⚠️ **Note:** `--force` overwrites the remote history — use with care on shared repos.
+⚠️ **Note:** `--force` overwrites the remote history - use with care on shared repos.
