@@ -1,0 +1,4 @@
+| **ARP** | Address Resolution Protocol | Finds the MAC address associated with an IP address | Uses ARP Request and ARP Reply; stores results in ARP cache | Finding the MAC address for `192.168.1.10` |
+| **DHCP** | Dynamic Host Configuration Protocol | Automatically configures devices on a network | Uses **DORA**: Discover → Offer → Request → Acknowledge; uses UDP ports **67/68** | Automatically receiving an IP address |
+| **ICMP** | Internet Control Message Protocol | Provides error messages and network diagnostics | Used by `ping`; includes Echo Request, Echo Reply, Destination Unreachable and Time Exceeded | `ping 8.8.8.8` |
+| **NAT** | Network Address Translation | Translates private IP addresses to public IP addresses | Allows multiple devices to share a public IP; **PAT** uses port numbers | `192.168.1.10` → Public IP |
