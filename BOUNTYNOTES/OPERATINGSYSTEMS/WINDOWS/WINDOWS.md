@@ -2,6 +2,6 @@
 | ----- | ----------------------------- | ----------- |
 | 1     | [[CMDs]]                      |             |
 | 2     | [[Powershell]]                |             |
-| 3     | [[Tools]]                     |             |
+| 3     | [[WINDOWSTOOLS]]              |             |
 | 4     | [[ActiveDirectoryPowerShell]] |             |
 

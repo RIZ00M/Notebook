@@ -28,11 +28,19 @@ The OSI Model splits network communication into 7 layers, each handling a differ
 
 ---
 
-## Layer 1 — Physical Layer
+## Notes
+
+CheckSum
+Ethernet Header / IP Header / TCP Header
+
+
+
+
+## Layer 1 - Physical Layer
 
 Contains the physical connection between devices (cables, radio signals, electrical/optical/wireless signals).
 
-## Layer 2 — Data Link Layer
+## Layer 2 - Data Link Layer
 
 Contains the protocol to enable data transfer between adjacent nodes, e.g. Ethernet (802.3) and WiFi (802.11).
 
@@ -45,32 +53,31 @@ The first half of a MAC address (the OUI — Organisationally Unique Identifier)
 | `a4:c3:f0` | Intel |
 | `85:ac:2d` | Network interface |
 
-![MAC Address](assets/MACAddress.png)
 
-![Wireshark — MAC Address capture](assets/WireSharkMacAddress.png)
+![Wireshark — MAC Address capture](WireSharkMacAddress.png)
 
-## Layer 3 — Network Layer
+## Layer 3 - Network Layer
 
 Sends the data between two nodes, using logical (IP) addressing and routing.
 
-![IP Address Breakdown](assets/IPBreakdown.png)
+![IP Address Breakdown](IPBreakdown.png)
 
-![IP Headers](assets/IPHeaders.png)
+![IP Headers](IPHeaders.png)
 
-## Layer 4 — Transport Layer
+## Layer 4 - Transport Layer
 
 Enables end-to-end communication, e.g. Transmission Control Protocol (TCP) and User Datagram Protocol (UDP).
 
-![Port Table](assets/PortTable.png)
+![Port Table](PortTable.png)
 
-## Layer 5 — Session Layer
+## Layer 5 - Session Layer
 
 Establishes and maintains communication, e.g. Network File System (NFS) and Remote Procedure Call (RPC).
 
-## Layer 6 — Presentation Layer
+## Layer 6 - Presentation Layer
 
 Ensures data is delivered in an understandable format (encoding, encryption, compression).
 
-## Layer 7 — Application Layer
+## Layer 7 - Application Layer
 
 Serves the network directly to end-user applications, e.g. Hypertext Transfer Protocol (HTTP).

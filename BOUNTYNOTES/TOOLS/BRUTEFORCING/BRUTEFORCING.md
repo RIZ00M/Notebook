@@ -2,5 +2,5 @@
 
 | Topic | Page      | Description                        |
 | ----- | --------- | ---------------------------------- |
-| 1     | [[Hydra]] | Brute Forcing Authentication Tool. |
+| 1     | [[hydra]] | Brute Forcing Authentication Tool. |
 

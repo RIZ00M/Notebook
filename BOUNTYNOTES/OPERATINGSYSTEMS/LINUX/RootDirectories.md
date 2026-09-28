@@ -1,6 +1,6 @@
 # Linux Root Directory Structure
 
-![Root filesystem overview](assets/RootDirectories.png)
+![Root filesystem overview](RootDirectories.png)
 
 Everything on a Linux system branches from `/`, the root of the filesystem.
 

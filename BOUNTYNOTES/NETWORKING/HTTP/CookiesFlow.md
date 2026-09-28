@@ -1,6 +1,6 @@
 # How Cookies Work (Request/Response Flow)
 
-![Cookies flow diagram](assets/CookiesDiagram.png)
+![Cookies flow diagram](CookiesDiagram.png)
 
 | Step | Request/Response | What Happens |
 |---|---|---|

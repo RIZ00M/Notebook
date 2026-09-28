@@ -1,0 +1,13 @@
+
+---
+
+| Hat               | Notes                                                                                                                                                                                                                                                                                            |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 🔴 **Red Hat**    | **Anger/Frustration** Sippy Cup<br>**Gut reaction** Student based app<br>**Happy** Socialising, Sports, Music<br>**Fear/Anxiety** Extraordinary situations<br><br>Can be used to generate a starting point for ideas or existing solution.<br><br>**Red** intuition, hunches, feelings, emotions |
+| ⚪ **White Hat**   | **Point of truth / facts**<br>**Non-bias**<br>**Itemised list**<br>**Sequential thinking**<br>**Research / Fact finding**<br><br>Can be used to identify the basics/starting point of an idea or existing solutions.<br><br>**White** information, facts, data, truth, objective                 |
+| 🟡 **Yellow Hat** | **List of positives**<br>**Optimistic view point**<br>**Itemised list**<br>**Sequential thinking**<br><br>Can be used to analyse any positives for an idea or existing solution.<br><br>**Yellow** benefits, positives, value                                                                    |
+| ⚫ **Black Hat**   | **List of negatives**<br>**Critical thinking**<br>**Itemised list**<br>Example: “The Apprentice” interviews<br><br>Can be used to analyse any negatives for an idea or existing solution.<br><br>**Black** caution, difficulties, weakness, risks                                                |
+| 🟢 **Green Hat**  | **Brain storming**<br>**Creative thinking techniques**<br>**Random stimulus**<br><br>Can be used to create an idea or spark a new line of thought.<br><br>**Green** creative, alternatives, possibilities                                                                                        |
+| 🔵 **Blue Hat**   | Normally controlled by a **leader / visionary**<br>**Controls process and procedure**<br>**Decides when to stop or change tact**<br><br>Can be used to manage the entire thinking process.<br><br>**Blue** managing the thinking process, summary, control                                       |
+
+---
