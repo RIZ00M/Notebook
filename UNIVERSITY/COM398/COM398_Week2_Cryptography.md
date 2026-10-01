@@ -2,15 +2,15 @@
 
 ---
 
-| Term | Definition |
-|---|---|
-| Plaintext | This is the original message or data that is to be secured. |
-| Encryption algorithm | This is the mechanism of securing the message and data. The encryption algorithm performs various substitutions and transformations on the plaintext. |
-| Secret key | The secret key is also input to the algorithm. The exact substitutions and transformations performed by the algorithm depend on the key. |
-| Ciphertext | This is the scrambled message produced as output. It depends on the plaintext and the secret key. For a given message, two different keys will produce two different ciphertexts. |
-| Decryption algorithm | This is essentially the encryption algorithm run in reverse. It takes the ciphertext and the same secret key and produces the original plaintext. |
-| Cryptographer | Invents clever algorithms. |
-| Cryptanalyst | Breaks clever algorithms. 
+| Term                 | Definition                                                                                                                                                                        |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Plaintext            | This is the original message or data that is to be secured.                                                                                                                       |
+| Encryption algorithm | This is the mechanism of securing the message and data. The encryption algorithm performs various substitutions and transformations on the plaintext.                             |
+| Secret key           | The secret key is also input to the algorithm. The exact substitutions and transformations performed by the algorithm depend on the key.                                          |
+| Ciphertext           | This is the scrambled message produced as output. It depends on the plaintext and the secret key. For a given message, two different keys will produce two different ciphertexts. |
+| Decryption algorithm | This is essentially the encryption algorithm run in reverse. It takes the ciphertext and the same secret key and produces the original plaintext.                                 |
+| Cryptographer        | Invents clever algorithms.                                                                                                                                                        |
+| Cryptanalyst         | Breaks clever algorithms.                                                                                                                                                         |
 
 ---
 ## Computational Issues
