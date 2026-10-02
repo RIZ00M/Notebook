@@ -14,7 +14,7 @@ Questions raised on the slide:
 - What if you don’t know the language?
 - What if it is compressed?
 
-![[Pasted image 20261001143336.png]]
+![[KeyBruteForceTimes.png]]
 
 ## Playfair Cipher
 
@@ -47,7 +47,7 @@ Playfair improves on monoalphabetic ciphers because it is much harder to use sta
 
 However, it is still relatively easy to break using language/frequency analysis.
 
-![[Pasted image 20261001143614.png]]
+![[EncryptionMatrix.png]]
 ## Vigenère Cipher
 
 The Vigenère cipher is an example of a **polyalphabetic cipher**.
