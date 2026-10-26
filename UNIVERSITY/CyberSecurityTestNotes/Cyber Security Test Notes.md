@@ -525,3 +525,374 @@ Current processors now make the key length a lot more ineffective
 6. Repeat: Do this for 16 rounds, using a different subkey each time
 
 ![[Permutation.png]]
+
+**Brute-force attacks**  
+• Try all possible keys on some ciphertext until an intelligible translation into plaintext is obtained  
+• On average half of all possible keys must be tried to achieve success  
+• Number of Keys are dictated by the key size.
+
+## **Triple DES**
+
+• Repeats basic DES algorithm three times using either two or three unique keys  
+• First standardized for use in financial applications in ANSI standard X9.17 in 1985  
+
+**Advantages:**  
+• 168-bit key length overcomes the vulnerability to brute-force attack of DES  
+• Underlying encryption algorithm is the same as in DES  
+**Drawbacks:**  
+• Algorithm is sluggish in software  
+• Uses a 64-bit block size
+
+| Category | Details | Key Information |
+|---|---|---|
+| Purpose | Needed a replacement for 3DES | 3DES was not reasonable for long-term use |
+| Proposal | NIST called for proposals for a new AES in 1997 | Advanced Encryption Standard (AES) |
+| Security | Should have a security strength equal to or better than 3DES | Stronger or equivalent security |
+| Efficiency | Significantly improved efficiency | Faster and more efficient encryption |
+| Cipher Type | Symmetric block cipher | Encrypts data using the same secret key |
+| Data Block Size | 128 bits | Fixed block size |
+| Key Sizes | 128, 192, or 256 bits | Three supported key lengths |
+| Selection | Selected Rijndael in November 2001 | Rijndael became the AES algorithm |
+| Standard | Published as FIPS 197 | Federal Information Processing Standard 197 |
+![[3DES.png]]
+## AES
+An iterative rather than Feistel cipher  
+o Processes data as block of 4 columns of 4 bytes  
+o Operates on entire data block in every round  
+**Designed to be:**  
+o Resistant against known attacks  
+o Speed and code compactness on many CPUs  
+o Design simplicity  
+Data block viewed as 4-by-4 table of bytes  
+Such a table is called the current state Key is expanded to array of words  
+Has 10 rounds in which state the following transformations (called "layers")
+o BS- byte substitution (1 S-box used on every byte)  
+o SR- shift rows (permute bytes between groups/columns)  
+o MC- mix columns (uses matrix multiplication in GF(256))  
+o ARK- add round key (XOR state with round key)
+
+## DES vs AES
+
+## 1. Data Encryption Standard (DES)
+
+- **Type:** Symmetric block cipher
+- **Block Size:** 64 bits
+- **Key Size:** 56 effective bits (64 bits including parity bits)
+- **Developed by:** IBM, based on earlier work, and adopted by NIST
+- **Standardized:** 1977
+- **Structure:** Feistel network
+- **Number of Rounds:** 16
+- **Security:** Insecure for modern use because its 56-bit key is vulnerable to brute-force attacks.
+- **Status:** Obsolete; replaced by stronger encryption standards.
+
+## 2. Advanced Encryption Standard (AES)
+
+- **Type:** Symmetric block cipher
+- **Block Size:** 128 bits
+- **Key Sizes:** 128, 192, or 256 bits
+- **Selected:** Rijndael was selected by NIST in 2000.
+- **Standardized:** Published as FIPS 197 in 2001.
+- **Structure:** Substitution-Permutation Network (SPN)
+- **Number of Rounds:**
+  - AES-128: 10 rounds
+  - AES-192: 12 rounds
+  - AES-256: 14 rounds
+- **Security:** Considered secure when implemented correctly with appropriate keys and modes of operation.
+- **Status:** Widely used in modern encryption systems.
+
+## 3. DES vs AES Comparison
+
+| Feature | DES | AES |
+|---|---|---|
+| Full Name | Data Encryption Standard | Advanced Encryption Standard |
+| Cipher Type | Symmetric block cipher | Symmetric block cipher |
+| Block Size | 64 bits | 128 bits |
+| Effective Key Size | 56 bits | 128, 192, or 256 bits |
+| Structure | Feistel network | Substitution-Permutation Network (SPN) |
+| Number of Rounds | 16 | 10, 12, or 14 |
+| Standardized | 1977 | 2001 |
+| Security | Insecure against brute-force attacks | Secure when properly implemented |
+| Performance | Efficient for older hardware | Efficient on modern hardware |
+| Current Use | Obsolete | Widely used |
+| Replacement | Replaced by stronger algorithms | Successor to DES in modern applications |
+
+## 4. Key Differences
+
+- **Key Size:** AES supports much larger keys than DES, making brute-force attacks significantly harder.
+- **Block Size:** AES encrypts 128-bit blocks, while DES encrypts 64-bit blocks.
+- **Structure:** DES uses a Feistel network, whereas AES uses a Substitution-Permutation Network.
+- **Security:** DES is no longer considered secure. AES remains a standard choice for modern encryption.
+- **Efficiency:** AES is designed for efficient implementation in modern software and hardware.
+
+## 5. Important Exam Notes
+
+- DES has a **56-bit effective key** and a **64-bit block size**.
+- AES has a **128-bit block size** and supports **128-, 192-, and 256-bit keys**.
+- DES uses **16 rounds**.
+- AES uses **10, 12, or 14 rounds**, depending on the key size.
+- Both DES and AES are **symmetric encryption algorithms**.
+- AES was selected to replace DES because DES no longer provided adequate security.
+- AES is based on the **Rijndael algorithm**.
+
+## 6. Quick Memory Trick
+
+- **DES:** 64-bit block, 56-bit key, 16 rounds.
+- **AES:** 128-bit block, 128/192/256-bit key, 10/12/14 rounds.
+
+**Remember:** DES is outdated; AES is the modern standard.
+
+![[AESDiagram.png]]
+
+![[RoundKeySizes.png]]
+
+**Random numbers are essential to many aspects of cryptography, including:**  
+• Keys for public-key algorithms  
+• Stream key for symmetric stream cipher  
+• Symmetric key for use as a temporary session key or in creating a digital envelope  
+• Handshaking to prevent replay attacks  
+• Session key
+
+**Independence of random numbers means that knowing one number in a sequence does not help you predict the other numbers.**
+
+• Probably most significant advancement in the 3000 year history of cryptography  
+• Uses two keys – a public & a private key  
+• Asymmetric since parties are not equal  
+• Uses clever application of number theoretic concepts to function  
+• complements rather than replaces private key crypto  
+Why Public-key  
+• Developed to address two key issues:  
+• key distribution – how to have secure communications in general without having  
+to trust a KDC with your key  
+• digital signatures – how to verify a message comes intact from the claimed  
+sender  
+• Public invention due to Whitfield Diffie & Martin Hellman at Stanford Uni in 1976  
+• known earlier in classified community
+
+![[Pasted image 20261026195715.png]]
+
+# Week 5 OS & Database Security
+
+## Worms
+•Program that actively seeks out more machines to infect and each infected  
+machine serves as an automated launching pad for attacks on other machines  
+•Exploits software vulnerabilities in client or server programs  
+•Can use network connections to spread from system to system  
+•Spreads through shared media (USB drives, CD, DVD data disks)  
+•E-mail worms spread in macro or script code included in attachments and instant messenger file transfers  
+•Upon activation the worm may replicate and propagate again  
+•Usually carries some form of payload  
+•First known implementation was done in Xerox Palo Alto Labs in the early 1980s
+
+**WannaCry**  
+Ransomware attack in May  
+2017 that spread extremely  
+fast over a period of hours  
+to days, infecting hundreds  
+of thousands of systems  
+belonging to both public  
+and private organizations in  
+more than 150 countries  
+
+It spread as a worm by  
+aggressively scanning both  
+local and random remote  
+networks, attempting to  
+exploit a vulnerability in the  
+SMB file sharing service on  
+unpatched Windows  
+systems  
+
+This rapid spread was only  
+slowed by the accidental  
+activation of a “kill-switch”  
+domain by a UK security  
+researcher  
+
+Once installed on infected  
+systems, it also encrypted  
+files, demanding a ransom  
+payment to recover them
+## Worm Technology
+
+## Overview
+
+A **computer worm** is a type of malware that can self-replicate and spread across computers and networks, often without direct user interaction. Worms may exploit vulnerabilities to propagate and can consume network resources, disrupt services, or deliver additional malicious payloads.
+
+## 1. Multiplatform
+
+**Definition:** A multiplatform worm can infect or spread across different operating systems or computing environments.
+
+- **How it works:** It may contain different code or techniques for targeting platforms such as Windows, Linux, and macOS.
+    
+- **Purpose:** To reach a wider range of devices rather than being limited to one operating system.
+    
+- **Example:** A worm designed with separate components that can infect both Windows and Linux systems.
+    
+
+**Key point:** Multiplatform means the worm can target multiple operating systems or platforms.
+
+## 2. Multi-exploit
+
+**Definition:** A multi-exploit worm uses multiple vulnerabilities or exploitation techniques to spread.
+
+- **How it works:** If one vulnerability is unavailable on a target, the worm may attempt another applicable vulnerability.
+    
+- **Purpose:** To increase the number of systems it can infect.
+    
+- **Example:** A worm that exploits a vulnerable network service and can also spread through a separate unpatched software flaw.
+    
+
+**Key point:** Multi-exploit means using more than one exploit or vulnerability to propagate.
+
+## 3. Ultrafast Spreading
+
+**Definition:** An ultrafast-spreading worm propagates rapidly across systems and networks.
+
+- **How it works:** Infected machines can scan for vulnerable targets and spread copies of the worm to them, potentially creating exponential growth.
+    
+- **Purpose:** To infect as many vulnerable systems as possible in a short period.
+    
+- **Example:** A worm that rapidly spreads through a corporate network by exploiting vulnerable computers.
+    
+
+**Key point:** Ultrafast spreading refers to the speed and scale of propagation.
+
+## 4. Polymorphic
+
+**Definition:** A polymorphic worm changes its appearance or certain parts of its code while preserving its malicious functionality.
+
+- **How it works:** It may encrypt or transform parts of its code and alter the associated decryption routine, making different copies look different.
+    
+- **Purpose:** To make signature-based antivirus detection more difficult.
+    
+- **Example:** Two copies of a worm that perform the same malicious actions but have different detectable code patterns.
+    
+
+**Key point:** Polymorphic malware changes its code representation to evade detection.
+
+## 5. Metamorphic
+
+**Definition:** A metamorphic worm rewrites or restructures its own code as it replicates, while retaining its underlying behaviour.
+
+- **How it works:** It can rearrange instructions, substitute equivalent instructions, or restructure its code to create different versions.
+    
+- **Purpose:** To make each generation harder to recognise through static code signatures.
+    
+- **Example:** Successive copies of a worm contain substantially different instruction sequences but perform the same propagation activities.
+    
+
+**Key point:** Metamorphic malware transforms its own code structure rather than relying only on encrypting its code.
+
+---
+
+## Polymorphic vs Metamorphic
+
+|Feature|Polymorphic|Metamorphic|
+|---|---|---|
+|Main change|Changes code appearance, often using encryption|Rewrites or restructures its code|
+|Code structure|May retain a recognisable underlying structure|Can substantially change its instruction structure|
+|Detection challenge|Varying code patterns and decryptors|Different code structures with similar behaviour|
+|Main objective|Evade malware detection|Evade malware detection|
+
+![[Worms.png]]
+
+## Malvertising
+
+- Places malware on websites without actually compromising them
+- The attacker pays for advertisements that are highly likely to be placed on their intended target websites and incorporate malware in them
+- Using these malicious ads, attackers can infect visitors to sites displaying them
+- The malware code may be dynamically generated to either reduce the chance of detection or to only infect specific systems
+- Has grown rapidly in recent years because they are easy to place on desired websites with few questions asked and are hard to track
+- Attackers can place these ads for as little as a few hours, when they expect their intended victims could be browsing the targeted websites, greatly reducing their visibility
+
+## Clickjacking
+
+- Also known as a user-interface (UI) redress attack
+- Using a similar technique, keystrokes can also be hijacked
+  - A user can be led to believe they are typing in the password to their email or bank account, but are instead typing into an invisible frame controlled by the attacker
+- Vulnerability used by an attacker to collect an infected user’s clicks
+  - The attacker can force the user to do a variety of things from adjusting the user’s computer settings to unwittingly sending the user to Web sites that might have malicious code
+  - By taking advantage of Adobe Flash or JavaScript an attacker could even place a button under or over a legitimate button making it difficult for users to detect
+  - A typical attack uses multiple transparent or opaque layers to trick a user into clicking on a button or link on another page when they were intending to click on the top level page
+  - The attacker is hijacking clicks meant for one page and routing them to another page
+
+## Social Engineering
+
+- “Tricking” users to assist in the compromise of their own systems
+
+## Spam
+
+- Unsolicited bulk e-mail
+- Significant carrier of malware
+- Used for phishing attacks
+
+## Trojan horse
+
+- Program or utility containing harmful hidden code
+- Used to accomplish functions that the attacker could not accomplish directly
+
+## Mobile phone Trojans
+
+- First appeared in 2004 (Skuller)
+- Target is the smartphone
+
+## Real-world damage
+
+- Causes damage to physical equipment
+  - Chernobyl virus rewrites BIOS code
+- Stuxnet worm
+  - Targets specific industrial control system software
+- There are concerns about using sophisticated targeted malware for industrial sabotage
+
+## Logic bomb
+
+- Code embedded in the malware that is set to “explode” when certain conditions are met
+
+## Payload Attack Agents
+
+## Bots
+
+- Takes over another Internet attached computer and uses that computer to launch or manage attacks
+
+## Botnet
+
+- Collection of bots capable of acting in a coordinated manner
+
+### Uses
+
+- Distributed denial-of-service (DDoS) attacks
+- Spamming
+- Sniffing traffic
+- Keylogging
+- Spreading new malware
+- Installing advertisement add-ons and browser helper objects (BHOs)
+- Attacking IRC chat networks
+- Manipulating online polls/games
+
+## Remote Control Facility
+
+- Distinguishes a bot from a worm
+  - Worm propagates itself and activates itself
+  - Bot is initially controlled from some central facility
+- Typical means of implementing the remote control facility is on an IRC server
+  - Bots join a specific channel on this server and treat incoming messages as commands
+  - More recent botnets use covert communication channels via protocols such as HTTP
+  - Distributed control mechanisms use peer-to-peer protocols to avoid a single point of failure
+
+## Buffer Overflows
+
+## Buffer
+- Contiguous set of a given data type
+- Common in C
+  - All strings are buffers of `char`’s
+
+## Overflow
+- Put more into the buffer than it can hold
+
+### Where does the extra data go?
+
+## Definition of Buffer Overflow
+
+A buffer overflow, is defined in the NIST Glossary of Key Information Security Terms as follows:
+
+> “A condition at an interface under which more input can be placed into a buffer or data holding area than the capacity allocated, overwriting other information. Attackers exploit such a condition to crash a system or to insert specially crafted code that allows them to gain control of the system.”
