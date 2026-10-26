@@ -70,7 +70,7 @@
   - Ciphertext: POH
   - P = 15, O = 14, H = 7
 
-![[HillCipher.png]]
+![[UNIVERSITY/COM398/assets/HillCipher.png]]
 
 ## ROT13
 
@@ -79,7 +79,7 @@
 - Susceptible to frequency analysis
 - Susceptible to brute forcing
 
-![[ROT13.png]]
+![[UNIVERSITY/COM398/assets/ROT13.png]]
 
 ---
 
