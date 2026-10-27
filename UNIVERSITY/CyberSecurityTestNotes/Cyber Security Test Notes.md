@@ -668,8 +668,330 @@ sender
 • Public invention due to Whitfield Diffie & Martin Hellman at Stanford Uni in 1976  
 • known earlier in classified community
 
-![[Pasted image 20261026195715.png]]
+# Week 4 Hashing & Digital Signatures
 
+**Modular arithmetic operations:**  
+Mod refers to the remainder of a division operation. The (mod n) operation maps all integers into the set  
+of integers {0, 1, … , (n -1)}. The Modular arithmetic exhibits the following properties:  
+Examples:  
+(11 + 15) mod 8 = 26 mod 8 = 2  
+[(11 mod 8) + (15 mod 8)] mod 8 = [3 + 7] mod 8 = 10 mod 8 = 2  
+(11 - 15) mod 8 = - 4 mod 8 = 4  
+[(11 mod 8) - (15 mod 8)] mod 8 = [3 - 7] mod 8 = - 4 mod 8 = 4  
+(11  15) mod 8 = 165 mod 8 = 5  
+[(11 mod 8)  (15 mod 8)] mod 8 = [3  7] mod 8 = 21 mod 8 =
+
+A Matrix is just rectangular arrays of items  
+A typical matrix is a rectangular array of numbers arranged in rows and columns.
+
+By convention matrices are “sized” using the number of rows (m) by number of columns  
+(n).
+
+Square matrix: a square matrix is an mxn matrix in which m = n.  
+
+![[Square.png]]
+
+Vector: a vector is an mxn matrix where either m OR n = 1 (but not both).
+
+![[Vector.png]]
+
+Scalar: a scalar is an mxn matrix where BOTH m and n = 1
+
+![[Scalar.png]]
+
+Zero matrix: an mxn matrix of zeros.
+
+![[Pasted image 20261027232848.png]]
+
+Identity Matrix: a square (mxm) matrix with 1s on the diagonal and zeros everywhere else.
+
+![[Pasted image 20261027232906.png]]
+
+Multiplying a matrix by a scalar: each element in the matrix is multiplied by the scalar.
+
+![[Pasted image 20261027232940.png]]
+
+Multiplying a matrix by a matrix:
+
+![[Pasted image 20261027233308.png]]
+
+## Public-Key Cryptography
+
+# Modular Exponentiation as a One-Way Function
+
+## 1. What is a One-Way Function?
+
+A **one-way function** is a function that is:
+
+- **Easy to compute** in the forward direction.
+    
+- **Difficult to reverse** to find the original input.
+    
+
+This concept is important in public-key cryptography because it allows encryption to be performed efficiently while making it difficult for an attacker to reverse the process.
+
+## 2. Modular Exponentiation
+
+**Exponentiation** means raising a number to a power.
+
+For example:
+
+$$2^3 = 2 \times 2 \times 2 = 8$$
+
+In general:
+
+$$a^b = \underbrace{a \times a \times \cdots \times a}_{b\text{ times}}$$
+
+**Modular exponentiation** means raising a number to a power and then calculating the remainder after division by another number.
+
+$$f(b) = a^b \bmod n$$
+
+Where:
+
+- $a$ = the base.
+    
+- $b$ = the exponent.
+    
+- $n$ = the modulus.
+    
+- $\bmod n$ = the remainder after division by $n$.
+    
+
+### Worked Example
+
+Calculate:
+
+$$3^4 \bmod 7$$
+
+**Step 1:** Calculate the power.
+
+$$3^4 = 3 \times 3 \times 3 \times 3 = 81$$
+
+**Step 2:** Divide by 7 and find the remainder.
+
+$$81 = 7 \times 11 + 4$$
+
+Therefore:
+
+$$\boxed{3^4 \bmod 7 = 4}$$
+
+## 3. Why Is It Difficult to Reverse?
+
+Suppose we know:
+
+$$3^b \bmod 7 = 4$$
+
+We want to find the original exponent, $b$.
+
+For small numbers, we can try different values:
+
+|Exponent $b$|Calculation|Result|
+|---|---|---|
+|1|$3^1 \bmod 7$|3|
+|2|$3^2 \bmod 7$|2|
+|3|$3^3 \bmod 7$|6|
+|4|$3^4 \bmod 7$|4|
+
+We discover that $b = 4$.
+
+However, real cryptographic systems use carefully chosen, much larger numbers. Finding the original exponent from the result can become computationally infeasible.
+
+This is related to the **discrete logarithm problem**.
+
+> **Important:** Modular exponentiation is easy to calculate forwards, but reversing it can be extremely difficult when suitable cryptographic parameters are used.
+
+## 4. Connection to Public-Key Cryptography
+
+|Forward direction|Reverse direction|
+|---|---|
+|Calculate $a^b \bmod n$|Recover $b$ from the result|
+|Efficient to compute|Can be computationally infeasible|
+|Produces the result|Related to the discrete logarithm problem|
+
+This mathematical asymmetry helps make certain public-key cryptographic systems possible.
+
+## 5. Summary
+
+- A **one-way function** is easy to compute but difficult to reverse.
+    
+- **Modular exponentiation** calculates $a^b \bmod n$.
+    
+- The result is the remainder after dividing $a^b$ by $n$.
+    
+- Recovering the exponent is related to the **discrete logarithm problem**.
+    
+- Security depends on suitable mathematical parameters; modular exponentiation alone does not guarantee security.
+    
+
+**Model answer:** Modular exponentiation is easy to perform because efficient algorithms can calculate powers modulo a number. However, recovering the original exponent from the result can be computationally infeasible for appropriately chosen parameters. This property is used in certain public-key cryptographic systems.
+
+**Factor**  
+Numbers you can multiply to get the original number  
+Factors of 12: 1, 2, 3, 4, 6, 12  
+Factors of 7: 1, 7  
+
+**Prime**  
+A number whose factors are only 1 and itself.  
+Prime Numbers: 2, 3, 5, 7, 11, 13, 29, 37, 61  
+Number divisible by only 1 and itself.  
+
+**Semi-Prime**  
+Numbers whose factors are prime numbers.  
+Factors of Semi-Prime 21: 1, 3, 7, 21  
+Product of two prime numbers is always a semi-prime.  
+Modulo  
+Remainder division.  
+13 MOD 5 = 3  
+21 MOD 5 = 1  
+25 MOD 5 = 0
+
+• Generating Keys:  
+Select two Prime Numbers: P , Q  
+Calculate Product: N=P×Q  
+Calculate Totient: Totient=(P−1)×(Q−1)  
+Select Public Key: (E)  
+Must be prime  
+Must be less than the Totient  
+Must NOT be a factor of the Totient  
+• Select a Private Key: (D)  
+The product of (D) and (E), divided by the Totient, must result in a  
+remainder of 1:  
+(D×E) mod Totient=1
+
+• The basic principle behind Diffie–Hellman key exchange is as follows:  
+1. Alice and Bob exchange their public keys PA and PB.  
+2. Alice computes F(SA , PB)  
+K= (𝑃𝐵)𝑆𝐴 mod q  
+3. Bob computes F(SB, PA)  
+K= (𝑃𝐴)𝑆𝐵 mod q  
+4. The special property of the public key cipher system, and the choice of the  
+function F, are such that F(SA , PB) = F(SB, PA). If this is the case then  
+Alice and Bob now share a secret.  
+5. This shared secret can easily be converted by some public means into a  
+bitstring suitable for use as, for example, a DES key.
+
+Ciphertext only •Encryption algorithm  
+•Ciphertext to be decoded  
+Known plaintext •Encryption algorithm  
+•Ciphertext to be decoded  
+•One or more plaintext-ciphertext pairs formed with the  
+secret key  
+Chosen plaintext •Encryption algorithm  
+•Ciphertext to be decoded  
+•Plaintext message chosen by cryptanalyst, together with  
+its corresponding ciphertext generated with the secret  
+key
+
+Chosen ciphertext •Encryption algorithm  
+•Ciphertext to be decoded  
+•Purported ciphertext chosen by cryptanalyst, together  
+with its corresponding decrypted plaintext generated with  
+the secret key  
+Chosen text 
+•Encryption algorithm  
+•Ciphertext to be decoded  
+•Plaintext message chosen by cryptanalyst, together with  
+its corresponding ciphertext generated with the secret  
+key  
+•Purported ciphertext chosen by cryptanalyst, together  
+with its corresponding decrypted plaintext generated with  
+the secret key
+
+---
+
+## **Hash Functions**  
+• A hash function maps a message of an arbitrary length to a m-bit output  
+• output known as the fingerprint or the message digest  
+• What is an example of hash functions?  
+• Give a hash function that maps Strings to integers in [0,2^{32}-1]  
+• Cryptographic hash functions are hash functions with additional security  
+requirements
+
+![[Pasted image 20261027234512.png]]
+
+A hash is ONE WAY, encryption is ENCRYPT/DECRYPT
+
+• A hash family is a four-tuple (X,Y,K,H ), where  
+• X is a set of possible messages  
+• Y is a finite set of possible message digests  
+• K is the keyspace  
+• For each KK, there is a hash function hKH . Each hK: X →Y  
+• Alternatively, one can think of H as a function KX→Y
+
+MD (Message Digest)  
+• Designed by Ron Rivest  
+• Family: MD2, MD4, MD5  
+• SHA (Secure Hash Algorithm)  
+• Designed by NIST  
+• Family: SHA-0, SHA-1, and SHA-2  
+• SHA-2: SHA-224, SHA-256, SHA-384, SHA-512  
+• SHA-3: New standard in competition  
+• RIPEMD (Race Integrity Primitive Evaluation Message  Digest)  
+• Developed by Katholieke University Leuven Team  
+• Family : RIPEMD-128, RIPEMD-160, RIPEMD-256, RIPEMD-
+
+![[Pasted image 20261027234649.png]]
+
+7 Main Affects
+
+**Speed**  
+• That means the hashing function should be able to produce a hash in a fraction of a second.  
+**Avalanche Effect**  
+• Hi 3639efcd08abb273b1619e82e78c29a7df02c1051b1820e99fc395dcaa3326b8  
+• hi 8f434346648f6b96df89dda901c5176b10a6d83961dd3c1ac88b59b2dc327aa4  
+**Hash Function Should Be Deterministic**  
+• Same input, will always result in the same output  
+• Pre-Image Resistance (One-Way Function)  
+• Can’t reverse the cryptographic hash function  
+**Collision Resistance**  
+• two different messages shouldn’t be able to produce the same hash value.
+**Software integrity**  
+• E.g., tripwire  
+**Timestamping**  
+• How to prove that you have discovered a secret on an earlier date without  
+disclosing it?  
+**Covered later**  
+• Message authentication  
+• One-time passwords  
+• Digital signature
+
+• Password Verification  
+• Nearly all operating systems and websites store passwords in hashs
+
+**Cryptocurrencies**  
+• Cryptographic hash functions are widely used in cryptocurrencies to pass  
+transaction information anonymously.  
+• For example, Bitcoin, the original and largest cryptocurrency, uses the SHA-   256 cryptographic hash function in its algorithm.  
+**Signature Generation and Verification**  
+• Verifying signatures is a mathematical process used to verify the authenticity  
+of digital documents or messages
+
+A hash function is a many-to-one function, so collisions can happen.
+
+Message Authentication Code  
+• A MAC scheme is a hash family, used for message  
+authentication  
+• MAC(K,M) = HK(M)  
+• The sender and the receiver share secret K  
+• The sender sends (M, Hk(M))  
+• The receiver receives (X,Y) and verifies that HK(X)=Y, if  
+so, then accepts the message as from the sender  
+• To be secure, an adversary shouldn’t be able to come  
+up with (X’,Y’) such that HK(X’)=Y’
+
+Advantages  
+• Authentication:  
+– Identification of person sign.  
+• Integrity of data:  
+– Every change is detected.  
+• Non Repudiation:  
+– Author has encrypted sign on message.  
+• Speed:  
+– Contracts are easily written, completed, and signed by all concerned parties in a little  
+amount of time no matter how far the parties are geographically.
+## Digital Signature  
+1. Digital Signature is a type of  electronic signature that encrypts  documents with digital codes that  are particularly difficult to  duplicate  
+2. In the case of a digital signature  message is encrypted with the  private key and decrypted with the public key.
 # Week 5 OS & Database Security
 
 ## Worms

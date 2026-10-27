@@ -629,3 +629,116 @@ The output sequence cancels out, revealing a relationship between the two plaint
 ### Exam tip
 
 When asked to compare modes, explain **what is fed into the encryption function, how blocks depend on each other, whether parallel processing is possible, how errors propagate, and what IV/nonce requirements apply**. These points distinguish the modes more clearly than memorising their names alone.
+
+
+# Diffie–Hellman (DH) Key Exchange
+
+## 1. Definition
+
+**Diffie–Hellman (DH) key exchange** is a cryptographic technique first published by Whitfield Diffie and Martin Hellman in **1976**.
+
+It allows two parties to establish a **shared secret key over an insecure communication channel**, even if an attacker can observe all the messages exchanged.
+
+The shared secret can then be used to encrypt and decrypt messages using symmetric encryption.
+
+## 2. Important Properties
+
+### Property 1: Both parties contribute to the shared secret
+
+- Each party chooses their own private value.
+    
+- They exchange values derived from their private values.
+    
+- Each party combines the received value with their own private value to calculate the same shared secret.
+    
+- Neither party can independently calculate the shared secret from the public information alone, assuming the private values remain secret.
+    
+
+### Property 2: An eavesdropper cannot feasibly calculate the shared secret
+
+- A third party can observe all the messages transmitted.
+    
+- The public parameters and exchanged values do not reveal the private values efficiently.
+    
+- Recovering the shared secret is computationally infeasible when suitable parameters and a secure implementation are used.
+    
+
+> **Key idea:** The parties can agree on a shared secret without transmitting the secret itself.
+
+## 3. How Diffie–Hellman Works
+
+Alice and Bob want to establish a shared secret.
+
+1. They publicly agree on a base (g) and a large prime number (p).
+    
+2. Alice chooses a private number (a).
+    
+3. Bob chooses a private number (b).
+    
+4. Alice calculates (A=g^a\bmod p) and sends (A) to Bob.
+    
+5. Bob calculates (B=g^b\bmod p) and sends (B) to Alice.
+    
+6. Alice calculates the shared secret (S=B^a\bmod p).
+    
+7. Bob calculates the shared secret (S=A^b\bmod p).
+    
+
+Both arrive at the same result:
+
+$$S=g^{ab}\bmod p$$
+
+The private values (a) and (b) are never sent across the network.
+
+## 4. Worked Example (Small Numbers)
+
+For illustration, suppose the public values are:
+
+$$p=23,\qquad g=5$$
+
+Alice chooses private value (a=6):
+
+$$A=5^6\bmod23=8$$
+
+Bob chooses private value (b=15):
+
+$$B=5^{15}\bmod23=19$$
+
+They exchange (A=8) and (B=19).
+
+**Alice calculates:**
+
+$$S=19^6\bmod23=2$$
+
+**Bob calculates:**
+
+$$S=8^{15}\bmod23=2$$
+
+Therefore, both parties obtain the same shared secret:
+
+$$\boxed{S=2}$$
+
+_Note: These tiny numbers are insecure and are used only to demonstrate the mathematics._
+
+## 5. Security Limitation
+
+Diffie–Hellman by itself does **not authenticate the parties**. Without authentication, an attacker could perform a _man-in-the-middle attack_, establishing separate shared secrets with Alice and Bob.
+
+Real-world protocols use authentication alongside key exchange to protect against this attack.
+
+## 6. Exam Summary
+
+- **Introduced:** 1976, by Diffie and Hellman.
+    
+- **Purpose:** Establish a shared secret over an insecure channel.
+    
+- **Private values:** Kept secret by each party.
+    
+- **Public values:** Can be exchanged openly.
+    
+- **Security basis:** The computational difficulty of reversing the relevant modular exponentiation.
+    
+- **Main limitation:** Basic Diffie–Hellman does not authenticate the participants.
+    
+
+**Exam-ready answer:** Diffie–Hellman allows two parties to establish a shared secret over an insecure channel without transmitting the secret itself. An eavesdropper can observe the exchanged public values but cannot feasibly calculate the shared secret when secure parameters are used.
