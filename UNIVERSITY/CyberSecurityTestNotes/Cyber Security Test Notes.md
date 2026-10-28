@@ -659,7 +659,7 @@ o ARK- add round key (XOR state with round key)
 • Asymmetric since parties are not equal  
 • Uses clever application of number theoretic concepts to function  
 • complements rather than replaces private key crypto  
-Why Public-key  
+Why Public-key  (Diffie-Hellman (DH))
 • Developed to address two key issues:  
 • key distribution – how to have secure communications in general without having  
 to trust a KDC with your key  
