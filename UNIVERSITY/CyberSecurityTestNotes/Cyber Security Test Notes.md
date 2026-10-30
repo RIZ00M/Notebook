@@ -701,7 +701,7 @@ Scalar: a scalar is an mxn matrix where BOTH m and n = 1
 
 Zero matrix: an mxn matrix of zeros.
 
-![[Pasted image 20261027232848.png]]
+![[HillCipherExample1.png]]
 
 Identity Matrix: a square (mxm) matrix with 1s on the diagonal and zeros everywhere else.
 
